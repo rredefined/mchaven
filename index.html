@@ -1,79 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>McHaven Store</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0c0c0c;
-            color: white;
-            text-align: center;
-        }
-        header {
-            background: #1e1e1e;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #f7d25c;
-        }
-        .discord-btn {
-            background: #5865F2;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-        .container {
-            margin-top: 40px;
-        }
-        .card {
-            background: #1e1e1e;
-            width: 300px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-        .price {
-            font-size: 22px;
-            color: #f7d25c;
-            margin-bottom: 10px;
-        }
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background: #111;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notskyblueee Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #02182b;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .fade {
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .float {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    header { text-align: center; padding: 40px 20px; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      position: relative;
+      padding-bottom: 5px;
+      transition: 0.3s;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: #1e90ff;
+      transition: 0.3s;
+    }
+    nav a:hover::after { width: 100%; }
+
+    .animated-box {
+      width: 80%;
+      margin: 30px auto;
+      padding: 25px;
+      background: #062035;
+      border-radius: 16px;
+      border: 1px solid #333;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .animated-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #1e90ff88;
+    }
+    .animated-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, #1e90ff44, transparent);
+      transition: 0.5s;
+    }
+    .animated-box:hover::before { left: 100%; }
+
+    h2 { text-align: center; }
+    a { color: #1e90ff; text-decoration: none; }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>McHaven Store</h1>
-        <a class="discord-btn" href="#">Join Discord</a>
-    </header>
 
-    <div class="container">
-        <h2>Buy Coins</h2>
-        <p>Coins are universal — usable everywhere on McHaven!</p>
+  <header class="fade">
+    <h1>Hey I Am Notskyblueee</h1>
+  </header>
 
-        <div class="card">
-            <h3>Coin Rate</h3>
-            <p class="price">₹10 = 100 Coins</p>
-            <p>To purchase coins, please join our Discord.</p>
-        </div>
-    </div>
+  <nav class="fade">
+    <a href="#contact">Contact</a>
+    <a href="#prices">Prices</a>
+    <a href="#work">My Work</a>
+  </nav>
 
-    <footer>
-        <p>Join Discord to buy coins and get support.</p>
-    </footer>
+  <section id="contact" class="animated-box fade">
+    <h2>Contact</h2>
+    
+    <p>
+      <b>Discord (recommended):</b> 
+      <a href="https://discord.gg/PBQBGzhHH7" target="_blank">
+        Join Discord & Create a Ticket
+      </a>
+    </p>
+
+    <p>
+      <b>Email:</b> 
+      <a href="mailto:pragyanpatragaming@gmail.com">
+        pragyanpatragaming@gmail.com
+      </a>
+    </p>
+  </section>
+
+  <section id="prices" class="animated-box fade">
+    <h2>Prices</h2>
+    <h3>Discord Development</h3>
+    <p>Small Developing – 50rs</p>
+    <p>Whole Server Making – 100rs</p>
+    <p>Whole Server with Bots – 200rs</p>
+
+    <h3>Minecraft Development</h3>
+    <p>Small Network Making (Survival, Lifesteal) – 100rs to 250rs</p>
+    <p>Big Network Making (Mcfleet, Hypixel) – 250rs – 400rs</p>
+  </section>
+
+  <section id="work" class="animated-box fade">
+    <h2>My Recent Work</h2>
+    <p>• play.mchaven.fun - Economy Network</p>
+    <p>• play.fgnetwork.space:19442 - Survival Network</p>
+  </section>
+
 </body>
 </html>
