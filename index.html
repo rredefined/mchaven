@@ -87,9 +87,34 @@
 
     h2 { text-align: center; }
     a { color: #1e90ff; text-decoration: none; }
+
+    /* YouTube top-right button */
+    .top-right {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1e90ff;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    .top-right:hover {
+      background: #3ea0ff;
+      box-shadow: 0 0 10px #1e90ff88;
+    }
   </style>
 </head>
 <body>
+
+  <!-- YouTube top-right button -->
+  <a href="https://www.youtube.com/@notskyblueee08" target="_blank" class="top-right">
+    YouTube
+  </a>
 
   <header class="fade">
     <h1>Hey I Am Notskyblueee</h1>
@@ -128,7 +153,7 @@
 
     <h3>Minecraft Development</h3>
     <p>Small Network Making (Survival, Lifesteal) – 100rs to 250rs</p>
-    <p>Big Network Making (Mcfleet, Hypixel) – 250rs – 400rs</p>
+    <p>Big Network Making (Mcfleet, Hypixel) – 250rs to 400rs</p>
   </section>
 
   <section id="work" class="animated-box fade">
